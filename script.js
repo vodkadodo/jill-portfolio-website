@@ -1,32 +1,28 @@
-/* =========================================================
-   Step 4: JavaScript Features (W3Schools Style)
-   ========================================================= */
-
 // Ensure the DOM is fully loaded before executing scripts
 document.addEventListener("DOMContentLoaded", function () {
 
-  // --- FEATURE 1: Dynamic Copyright Year in Footer ---
+  // Copyright Footer
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
 
 
-  // --- FEATURE 2: Dark / Light Mode Toggle ---
+  // Dark / Light Mode Toggle
   const themeBtn = document.getElementById("theme-btn");
   if (themeBtn) {
     themeBtn.addEventListener("click", function () {
       document.body.classList.toggle("dark-mode");
       if (document.body.classList.contains("dark-mode")) {
-        themeBtn.textContent = "☀️ Light Mode";
+        themeBtn.textContent = "Light Mode";
       } else {
-        themeBtn.textContent = "🌙 Dark Mode";
+        themeBtn.textContent = "Dark Mode";
       }
     });
   }
 
 
-  // --- FEATURE 3: Active Link Highlight on Scroll ---
+  // Active Link Highlight on Scroll
   const sections = document.querySelectorAll(".section");
   const navLinks = document.querySelectorAll(".topnav a");
 
@@ -48,10 +44,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  // --- FEATURE 4: Back-to-Top Button (Dynamically Generated) ---
+  // Back-to-Top Button
   const topBtn = document.createElement("button");
   topBtn.id = "backToTop";
-  topBtn.innerHTML = "⬆️ Top";
+  topBtn.innerHTML = "Top";
   topBtn.style.cssText = "display:none; position:fixed; bottom:20px; right:20px; z-index:99; padding:10px 15px; background-color:#830000; color:white; border:1px solid #FF0000; border-radius:4px; cursor:pointer; font-weight:bold;";
   document.body.appendChild(topBtn);
 
@@ -68,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  // --- FEATURE 5: Typing Effect on Home Section Headline ---
+  // Typing Effect on Home Section Headline
   const homeHeading = document.querySelector("#home h1");
   if (homeHeading) {
     const originalText = homeHeading.innerText;
@@ -86,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  // --- FEATURE 6: Contact Form Validation & Feedback ---
+  // Contact Form Validation & Feedback
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
     contactForm.addEventListener("submit", function (event) {
@@ -107,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  // --- FEATURE 7: Interactive Hover Border Highlight for Project Items ---
+  // Interactive Hover Border Highlight for Project Items
   const projectItems = document.querySelectorAll(".project-item");
   projectItems.forEach(function (item) {
     item.addEventListener("mouseenter", function () {
@@ -119,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  // --- FEATURE 8: Dynamic Time-Based Greeting Banner ---
+  // Dynamic Time-Based Greeting Banner
   const homeSection = document.getElementById("home");
   if (homeSection) {
     const currentHour = new Date().getHours();
@@ -140,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  // --- FEATURE 9: Click-to-Inspect Project Details Alert ---
+  // Click-to-Inspect Project Details Alert
   projectItems.forEach(function (item) {
     item.style.cursor = "pointer";
     item.addEventListener("click", function () {
@@ -151,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  // --- FEATURE 10: Smooth Scrolling for Top Navbar Navigation Links ---
+  // Smooth Scrolling for Top Navbar Navigation Links
   const navAnchors = document.querySelectorAll('.topnav a[href^="#"]');
   navAnchors.forEach(function (anchor) {
     anchor.addEventListener("click", function (event) {
